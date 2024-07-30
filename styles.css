@@ -116,7 +116,7 @@ h1:hover {--_p: 100%}
 }
 
 #nav-header h1 {
-    margin-left: 20px;
+    padding-left: 20px;
     font-size: 1.5em;
 }
 
@@ -345,8 +345,12 @@ footer p {
 /* Responsive design */
 @media (max-width: 768px) {
 
+    #nav-header h1 {
+        padding-left: 0;
+    }
+
     #main-header h1 {
-        font-size: 4em;
+        font-size: 3.5em;
     }
 
     #nav-header {
