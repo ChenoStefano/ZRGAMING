@@ -1,24 +1,3 @@
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    var formData = new FormData(this);
-    
-    fetch('send_email.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => {
-        if (response.ok) {
-            alert('Mensaje enviado. Nos pondremos en contacto contigo pronto.');
-            document.getElementById('contactForm').reset();
-        } else {
-            return response.text().then(text => { throw new Error(text) });
-        }
-    })
-    .catch(error => {
-        alert('Hubo un problema con el envío: ' + error.message);
-    });
-});
 
 document.addEventListener("DOMContentLoaded", function() {
     const elementos = document.querySelectorAll('.fade-in');
